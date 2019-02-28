@@ -98,11 +98,17 @@ export interface SnotifyToastConfig {
    */
   animation?: SnotifyAnimate;
   /**
-   * Html string witch overrides toast content
+   * Html string which overrides toast content
    * @type {string}
    * @default null
    */
   html?: string;
+  /**
+   * Name of custom component which overrides toast content
+   * @type {string}
+   * @default null
+   */
+  component?: string;
   /**
    * Toasts position on screen
    * @type {SnotifyPosition}

@@ -24,6 +24,9 @@
         <img class="snotify-icon" :src='toast.config.icon'/>
       </div>
     </div>
+    <div class="snotifyToast__inner" v-html="toast.config.html" v-else-if="toast.config.component">
+      <component :is="toast.config.component"></component>
+    </div>
     <div class="snotifyToast__inner" v-html="toast.config.html" v-else></div>
     <snotify-button v-if="toast.config.buttons" :toast="toast" />
   </div>
